@@ -12,10 +12,10 @@ BOT_NAME = "europound"
 SPIDER_MODULES = ["europound.spiders"]
 NEWSPIDER_MODULE = "europound.spiders"
 
-# FEEDS ={
+FEEDS ={
 
-#     "dollardata.json" : { "format" : "json"}
-# }
+    "dollardata.json" : { "format" : "json"}
+}
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -70,7 +70,7 @@ CONCURRENT_REQUESTS = 1
 
 ITEM_PIPELINES = {
     "europound.pipelines.EuropoundPipeline": 300,
-    "europound.pipelines.SavetoMySQL": 400,
+    # "europound.pipelines.SavetoMySQL": 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
